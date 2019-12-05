@@ -17,4 +17,4 @@ Route::get('/', function () {
 
 Auth::routes(['verify' => true]); // This will set up routes related to log in and registration
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
