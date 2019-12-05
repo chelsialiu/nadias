@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes(); // This will set up routes related to log in and registration
+Auth::routes(['verify' => true]); // This will set up routes related to log in and registration
 
 Route::get('/home', 'HomeController@index')->name('home');
